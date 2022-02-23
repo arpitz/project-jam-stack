@@ -5,7 +5,18 @@ layout: base.njk
 
 <div class="container">
     <h1>Hello World!!</h1>
+    <h3>Welcome to a JAM stack application</h3>
     <div class="vibe">You are great</div>
+
+    <ul>
+  {% for article in news.articles %}
+    <li>
+      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+      <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
+    </li>
+
+  {% endfor %}
+  </ul>
 </div>
 
 <script src="/js/vibe.js"></script>
