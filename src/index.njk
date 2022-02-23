@@ -9,6 +9,7 @@ layout: base.njk
     <div class="vibe">You are great</div>
 
     <ul>
+
   {% for article in news.articles %}
     <li>
       <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
@@ -16,6 +17,7 @@ layout: base.njk
     </li>
 
   {% endfor %}
+
   </ul>
 </div>
 
