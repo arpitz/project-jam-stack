@@ -4,21 +4,22 @@ layout: base.njk
 ---
 
 <div class="container">
-    <h1>Hello World!!</h1>
-    <h3>Welcome to a JAM stack application</h3>
-    <div class="vibe">You are great</div>
+    <h1>Welcome to a JAM stack application</h1>
+    {# <div class="vibe">You are great</div> #}
 
-    <ul>
+    <div>
 
-  {% for article in news.articles %}
-    <li>
-      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
-      <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
-    </li>
+  {% for author in authors %}
+    <div>
+      <h2>{{ author.name }}</h2>
+      <img src="{{ author.avatar }}" style="width: 150px" }/>
+      <p>{{ author.description }}</p>
+      <hr />
+    </div>
 
   {% endfor %}
 
-  </ul>
+  </div>
 </div>
 
 <script src="/js/vibe.js"></script>
